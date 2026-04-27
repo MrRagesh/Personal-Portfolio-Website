@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ragesh P – AI & Automation Engineer | Digital Growth Specialist. Building AI-powered systems, high-converting websites, and growth strategies." />
+  <meta name="keywords" content="AI Engineer, Automation, Web Development, Digital Marketing, Freelancer, Ragesh P" />
+  <meta name="author" content="Ragesh P" />
+  <title>Ragesh P | AI & Automation Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">R</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Loading Experience...</span>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Ragesh<span class="logo-dot">.</span><span class="logo-p">P</span><span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta btn-primary">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+      <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span> Available for Projects
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name" id="heroName">Ragesh P</span>
+          <span class="hero-roles">
+            <span class="role-item active">AI & Automation Engineer</span>
+            <span class="role-item">Digital Growth Specialist</span>
+            <span class="role-item">UI/UX Developer</span>
+            <span class="role-item">No-Code Architect</span>
+          </span>
+        </h1>
+        <p class="hero-sub">
+          I build <span class="highlight-text">AI-powered systems</span>, high-converting websites,<br />
+          and growth strategies that <span class="highlight-text">scale businesses</span>.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary magnetic">
+            <i class="fas fa-rocket"></i> Hire Me
+          </a>
+          <a href="#portfolio" class="btn-outline magnetic">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Done</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-3d-object">
+          <!-- The 3D-looking character image -->
+          <img src="assets/img/Ragesh Profile.png" alt="Ragesh P Character" class="hero-character">
+          <div class="object-glow"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrapper">
+            <div class="about-img-bg"></div>
+            <div class="about-img-frame">
+              <div class="about-avatar">
+                <div class="avatar-ring ring-1"></div>
+                <div class="avatar-ring ring-2"></div>
+                <div class="avatar-ring ring-3"></div>
+                <img src="assets/img/Ragesh Profile.png" alt="Ragesh P" class="avatar-photo">
+              </div>
+            </div>
+            <div class="about-badge-float badge-1">
+              <i class="fas fa-brain"></i> AI Expert
+            </div>
+            <div class="about-badge-float badge-2">
+              <i class="fas fa-code"></i> 50+ Projects
+            </div>
+            <div class="about-badge-float badge-3">
+              <i class="fas fa-star"></i> Top Rated
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">The Mind Behind <span class="glow-text">the Machine</span></h2>
+          <p class="about-bio">
+            I'm <strong>Ragesh P</strong>, a passionate freelancer specializing in AI-driven solutions, automation engineering, and digital growth strategies. I help businesses streamline operations, build powerful online presence, and scale using modern technologies.
+          </p>
+          <p class="about-bio">
+            My approach combines creativity, data-driven thinking, and cutting-edge tools to deliver fast, efficient, and impactful results that actually move the needle.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>AI & Automation</span><span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Web Development</span><span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Digital Marketing</span><span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>UI/UX Design</span><span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+          <div class="about-tech">
+            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+            <span class="tech-tag"><i class="fas fa-robot"></i> AI/ML</span>
+            <span class="tech-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+            <span class="tech-tag"><i class="fab fa-google"></i> Google Ads</span>
+            <span class="tech-tag"><i class="fab fa-meta"></i> Meta Ads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section class="services section-pad" id="services">
+    <div class="services-bg-glow"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">What I Do</div>
+        <h2 class="section-title">Services That <span class="glow-text">Drive Results</span></h2>
+        <p class="section-desc">Premium solutions tailored to grow your business with measurable impact.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+          </div>
+          <h3>AI & Automation Engineering</h3>
+          <p>Custom AI models, workflow automation, and intelligent systems that eliminate manual tasks and boost efficiency by 10x.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> ChatBots & AI Agents</li>
+            <li><i class="fas fa-check-circle"></i> Process Automation</li>
+            <li><i class="fas fa-check-circle"></i> Data Pipelines</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-globe"></i></div>
+          </div>
+          <h3>AI-Powered Website Development</h3>
+          <p>High-performance websites enhanced with AI features – personalization, smart search, and conversion optimization built in.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> React / Next.js</li>
+            <li><i class="fas fa-check-circle"></i> AI Integrations</li>
+            <li><i class="fas fa-check-circle"></i> Speed Optimized</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal-up featured" data-delay="200">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-palette"></i></div>
+          </div>
+          <h3>Web Design & UI/UX</h3>
+          <p>Stunning, conversion-focused designs powered by AI-assisted workflows. Beautiful interfaces that users actually enjoy using.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Figma Prototypes</li>
+            <li><i class="fas fa-check-circle"></i> Mobile-First Design</li>
+            <li><i class="fas fa-check-circle"></i> A/B Tested Layouts</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal-up" data-delay="300">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+          </div>
+          <h3>No-Code Development</h3>
+          <p>Fast, scalable WordPress websites with advanced custom functionality – no heavy code, all the heavy performance.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> WordPress Expert</li>
+            <li><i class="fas fa-check-circle"></i> WooCommerce Stores</li>
+            <li><i class="fas fa-check-circle"></i> Plugin Customization</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal-up" data-delay="400">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+          </div>
+          <h3>Content Creation for Brands</h3>
+          <p>AI-enhanced content strategy and creation – blog posts, social copy, video scripts, and brand storytelling that converts.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> SEO Content</li>
+            <li><i class="fas fa-check-circle"></i> Social Media Copy</li>
+            <li><i class="fas fa-check-circle"></i> Brand Narrative</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal-up" data-delay="500">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          </div>
+          <h3>Digital Marketing</h3>
+          <p>Meta Ads, Google Ads, and full-funnel strategies that generate real ROI. Data-driven campaigns with transparent reporting.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Meta & Google Ads</li>
+            <li><i class="fas fa-check-circle"></i> GMB Optimization</li>
+            <li><i class="fas fa-check-circle"></i> ROI Focused</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This Service <i class="fas fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO SECTION ========== -->
+  <section class="portfolio section-pad" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">My Work</div>
+        <h2 class="section-title">Recent <span class="glow-text">Projects</span></h2>
+        <p class="section-desc">A curated selection of work that delivered real business impact.</p>
+      </div>
+      <div class="portfolio-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / Automation</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item reveal-up" data-category="ai">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">AI / Automation</span>
+              <h3>AI Customer Support Bot</h3>
+              <p>GPT-powered chatbot reducing support tickets by 60% for an e-commerce brand.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal-up" data-category="web">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder web-theme">
+                <i class="fas fa-store"></i>
+                <span>E-Commerce Platform</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Web Dev</span>
+              <h3>Premium E-Commerce Store</h3>
+              <p>WooCommerce store with AI product recommendations increasing AOV by 35%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal-up" data-category="marketing">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder mkt-theme">
+                <i class="fas fa-bullhorn"></i>
+                <span>Growth Campaign</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Marketing</span>
+              <h3>Meta Ads Growth Campaign</h3>
+              <p>Scaled a local business from ₹0 to ₹2L/month revenue using targeted Meta Ads.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal-up" data-category="ai">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <i class="fas fa-cogs"></i>
+                <span>Automation System</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">AI / Automation</span>
+              <h3>Business Workflow Automation</h3>
+              <p>End-to-end automation saving 20+ hours/week for a logistics company.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal-up" data-category="web">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder web-theme">
+                <i class="fas fa-hospital"></i>
+                <span>Healthcare Portal</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Web Dev</span>
+              <h3>Healthcare Booking System</h3>
+              <p>Appointment management portal with AI scheduling assistant for a clinic chain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal-up" data-category="marketing">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder mkt-theme">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Local SEO</span>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Marketing</span>
+              <h3>GMB & Local SEO Domination</h3>
+              <p>Took a restaurant from page 3 to #1 on Google Maps in 90 days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section class="testimonials section-pad" id="testimonials">
+    <div class="testimonials-bg"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Client Reviews</div>
+        <h2 class="section-title">What Clients <span class="glow-text">Say</span></h2>
+        <p class="section-desc">Real feedback from businesses we've helped grow.</p>
+      </div>
+      <div class="testimonials-wrapper reveal-up">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Ragesh completely transformed our business operations. The AI automation he built saves us 30+ hours every week. Absolutely outstanding work and communication throughout."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">AK</div>
+              <div>
+                <strong>Arjun Kumar</strong>
+                <span>CEO, TechStart Solutions</span>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Our website conversions doubled after Ragesh redesigned it. He has a rare talent for combining beautiful design with technical precision. Highly recommend!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar">PR</div>
+              <div>
+                <strong>Priya Reddy</strong>
+                <span>Founder, StyleCraft Boutique</span>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"The Meta Ads campaign Ragesh ran for us generated 5x ROAS in the first month. He knows exactly how to target the right audience. Game changer for our brand."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">SM</div>
+              <div>
+                <strong>Sanjay Mehta</strong>
+                <span>Marketing Director, GrowFast</span>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"We went from invisible online to ranking #1 on Google Maps in under 3 months. Ragesh's GMB strategy is incredibly effective. Our footfall has increased by 70%!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar">ND</div>
+              <div>
+                <strong>Nisha Devi</strong>
+                <span>Owner, Spice Garden Restaurant</span>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"The chatbot Ragesh built handles 80% of our customer queries automatically. Customer satisfaction scores went up and our team can finally focus on real work."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">RT</div>
+              <div>
+                <strong>Rohan Thomas</strong>
+                <span>CTO, ShopEasy Platform</span>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-controls">
+          <button class="testi-btn" id="testiPrev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section section-pad" id="cta">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content reveal-up">
+        <div class="section-tag">Ready to Start?</div>
+        <h2 class="cta-title">Let's Build Something <span class="glow-text">Powerful</span> Together</h2>
+        <p class="cta-desc">From AI systems to digital campaigns — I turn your vision into a high-performance reality.</p>
+        <div class="cta-btns">
+          <a href="#contact" class="btn-primary large magnetic">
+            <i class="fas fa-rocket"></i> Start a Project
+          </a>
+          <a href="mailto:rageshp.work@gmail.com" class="btn-outline large magnetic">
+            <i class="fas fa-envelope"></i> Contact Me Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact section-pad" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Work <span class="glow-text">Together</span></h2>
+        <p class="section-desc">Ready to take your business to the next level? Let's talk.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:rageshp.work@gmail.com">rageshp.work@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://linkedin.com/in/rageshp" target="_blank">linkedin.com/in/rageshp</a>
+            </div>
+          </div>
+          <div class="contact-availability">
+            <div class="avail-dot"></div>
+            <span>Currently available for new projects</span>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="AI & Automation Engineering">AI & Automation Engineering</option>
+                  <option value="AI-Powered Website Development">AI-Powered Website Development</option>
+                  <option value="Web Design & UI/UX">Web Design & UI/UX</option>
+                  <option value="No-Code Development (WordPress)">No-Code Development (WordPress)</option>
+                  <option value="Content Creation">Content Creation for Brands</option>
+                  <option value="Digital Marketing">Digital Marketing (Meta/Google Ads)</option>
+                  <option value="GMB Optimization">Google My Business Optimization</option>
+                  <option value="Other">Other / Multiple Services</option>
+                </select>
+                <span class="form-error" id="serviceError"></span>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="message">Project Details *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, goals, timeline, and budget..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn-primary full-width magnetic" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong>Message sent successfully!</strong>
+                <p>I'll get back to you within 24 hours.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Ragesh<span class="logo-dot">.</span><span class="logo-p">P</span><span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>AI & Automation Engineer | Digital Growth Specialist. Building the future, one project at a time.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/919999999999" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com/in/rageshp" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/rageshp" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/rageshp" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://youtube.com/@rageshp" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">AI & Automation</a></li>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">Digital Marketing</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">GMB Optimization</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-envelope"></i> rageshp.work@gmail.com</p>
+          <p><i class="fab fa-whatsapp"></i> Available on WhatsApp</p>
+          <p><i class="fas fa-map-marker-alt"></i> India (Remote Worldwide)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ragesh P. All rights reserved. Built with <span class="heart">❤</span> and AI.</p>
+        <p>Designed for performance, built for impact.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING SOCIAL ICONS ========== -->
+  <div class="floating-socials" id="floatingSocials">
+    <a href="https://wa.me/919999999999" target="_blank" class="float-icon whatsapp" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://linkedin.com/in/rageshp" target="_blank" class="float-icon linkedin" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://instagram.com/rageshp" target="_blank" class="float-icon instagram" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://github.com/rageshp" target="_blank" class="float-icon github" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://youtube.com/@rageshp" target="_blank" class="float-icon youtube" title="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
