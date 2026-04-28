@@ -335,10 +335,157 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 .hero-visual {
   position: relative;
   display: flex;
+  flex-direction: column; /* Stack character on top of cards */
   justify-content: center;
   align-items: center;
   perspective: 1000px;
   width: 100%;
+  gap: 40px;
+}
+
+.hero-char-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.char-body {
+  position: relative;
+  z-index: 5;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
+  animation: floatBody 6s ease-in-out infinite;
+}
+
+.char-platform {
+  position: absolute;
+  bottom: -20px;
+  width: 200px;
+  height: 40px;
+  background: radial-gradient(ellipse at center, var(--blue-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.char-orbit {
+  position: absolute;
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.char-orbit-1 {
+  width: 450px;
+  height: 450px;
+  animation: orbitSpin 15s linear infinite;
+}
+
+.char-orbit-2 {
+  width: 350px;
+  height: 350px;
+  animation: orbitSpin 10s linear reverse infinite;
+}
+
+.char-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--blue);
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0 0 10px var(--blue);
+  z-index: 6;
+}
+
+.cp-1 { top: 20%; left: 10%; animation: floatParticle 4s infinite 0s; }
+.cp-2 { top: 60%; right: 10%; animation: floatParticle 5s infinite 1s; }
+.cp-3 { bottom: 20%; left: 20%; animation: floatParticle 6s infinite 2s; }
+.cp-4 { top: 10%; right: 20%; animation: floatParticle 4s infinite 3s; }
+
+@keyframes floatBody {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes floatParticle {
+  0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+  50% { transform: translate(10px, -20px); opacity: 1; }
+}
+/* Float Cards styling */
+.hero-float-cards-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  z-index: 10;
+  flex-wrap: nowrap; /* Allow wrapping on smaller screens */
+}
+
+.hero-float-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 18px 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  animation: floatCard 5s ease-in-out infinite;
+  min-width: 180px;
+}
+
+.hero-float-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--blue);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-float-card:nth-child(2) { animation-delay: 0s; }
+.hero-float-card:nth-child(3) { animation-delay: 1.5s; }
+.hero-float-card:nth-child(4) { animation-delay: 3s; }
+
+.fc-icon {
+  font-size: 1.8rem;
+  margin-bottom: 2px;
+}
+
+.fc-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff; /* Pure white for better contrast */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.fc-sub {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85); /* Much brighter for visibility */
+  font-weight: 600;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@media (max-width: 992px) {
+  .hero-float-cards-wrap {
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .hero-float-card {
+    padding: 12px 16px;
+    min-width: 140px;
+  }
 }
 .hero-3d-object {
   position: relative;
@@ -764,7 +911,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 .portfolio-card:hover { transform: translateY(-6px); border-color: rgba(14,165,233,0.3); }
 .portfolio-img { position: relative; overflow: hidden; aspect-ratio: 16/10; }
 .portfolio-placeholder {
-  width: 100%; height: 100%;
+  width: 100%; 
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   gap: 12px;

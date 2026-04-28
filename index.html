@@ -125,12 +125,239 @@
       </div>
       
       <div class="hero-visual">
-        <div class="hero-3d-object">
-          <!-- The 3D-looking character image -->
+        <div class="hero-char-wrap">
+        <!-- Orbit rings -->
+        <div class="char-orbit char-orbit-1"></div>
+        <div class="char-orbit char-orbit-2"></div>
+        <!-- Glow platform -->
+        <div class="char-platform"></div>
+        <!-- Floating particles -->
+        <div class="char-particle cp-1"></div>
+        <div class="char-particle cp-2"></div>
+        <div class="char-particle cp-3"></div>
+        <div class="char-particle cp-4"></div>
+        <!-- 3D CHARACTER SVG -->
+        <div class="char-body">
+          <svg width="340" height="440" viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Skin -->
+              <linearGradient id="skinG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FBBF8A"/>
+                <stop offset="100%" stop-color="#E8955C"/>
+              </linearGradient>
+              <!-- Jacket -->
+              <linearGradient id="jacketG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4F46E5"/>
+                <stop offset="60%" stop-color="#3730A3"/>
+                <stop offset="100%" stop-color="#1E1B4B"/>
+              </linearGradient>
+              <!-- Shirt -->
+              <linearGradient id="shirtG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E2E8F0"/>
+                <stop offset="100%" stop-color="#CBD5E1"/>
+              </linearGradient>
+              <!-- Hair -->
+              <linearGradient id="hairG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1A0A00"/>
+                <stop offset="100%" stop-color="#3D1F00"/>
+              </linearGradient>
+              <!-- Shadow under body -->
+              <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(79,70,229,0.5)"/>
+                <stop offset="100%" stop-color="rgba(79,70,229,0)"/>
+              </radialGradient>
+              <!-- Laptop screen -->
+              <linearGradient id="screenG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0F172A"/>
+                <stop offset="100%" stop-color="#1E293B"/>
+              </linearGradient>
+              <!-- Glow face light -->
+              <radialGradient id="faceLightG" cx="40%" cy="35%" r="50%">
+                <stop offset="0%" stop-color="#FDDCB5"/>
+                <stop offset="100%" stop-color="#E8955C"/>
+              </radialGradient>
+              <!-- Body shadow -->
+              <linearGradient id="shadowBodyG" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(0,0,0,0.25)"/>
+                <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+              </linearGradient>
+              <!-- Tablet glow -->
+              <linearGradient id="tabletG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4F46E5"/>
+                <stop offset="100%" stop-color="#A855F7"/>
+              </linearGradient>
+            </defs>
+
+            <!-- ── LEGS ── -->
+            <!-- Left leg -->
+            <rect x="128" y="315" width="46" height="95" rx="22" fill="#1E293B"/>
+            <!-- Right leg -->
+            <rect x="166" y="315" width="46" height="95" rx="22" fill="#111827"/>
+            <!-- Left shoe -->
+            <ellipse cx="148" cy="408" rx="28" ry="12" fill="#0F172A"/>
+            <ellipse cx="145" cy="405" rx="24" ry="9" fill="#1E293B"/>
+            <!-- Right shoe -->
+            <ellipse cx="190" cy="408" rx="28" ry="12" fill="#0F172A"/>
+            <ellipse cx="187" cy="405" rx="24" ry="9" fill="#1E293B"/>
+
+            <!-- ── TORSO / JACKET ── -->
+            <path d="M100 210 Q95 260 92 320 L248 320 Q245 260 240 210 Q220 195 170 195 Q120 195 100 210Z" fill="url(#jacketG)"/>
+            <!-- Jacket lapels -->
+            <path d="M140 210 L155 260 L170 240 L155 210Z" fill="#E2E8F0" opacity="0.9"/>
+            <path d="M200 210 L185 260 L170 240 L185 210Z" fill="#CBD5E1" opacity="0.9"/>
+            <!-- Jacket shadow right -->
+            <path d="M200 210 Q230 230 240 320 L248 320 Q245 260 240 210Z" fill="url(#shadowBodyG)" opacity="0.4"/>
+            <!-- Jacket collar detail -->
+            <path d="M148 205 Q170 215 192 205" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+            <!-- Buttons -->
+            <circle cx="170" cy="265" r="3.5" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="170" cy="282" r="3.5" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="170" cy="299" r="3.5" fill="rgba(255,255,255,0.25)"/>
+            <!-- Pocket detail -->
+            <rect x="108" y="248" width="22" height="14" rx="4" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+            <!-- ── LEFT ARM (holding tablet) ── -->
+            <path d="M100 215 Q72 230 65 275 Q62 295 75 305 Q88 310 98 295 Q108 275 115 260 L108 220Z" fill="url(#skinG)"/>
+            <!-- Jacket sleeve left -->
+            <path d="M100 215 Q75 230 68 270 L80 278 Q92 260 108 230Z" fill="url(#jacketG)"/>
+            <!-- Left hand -->
+            <ellipse cx="78" cy="305" rx="14" ry="12" fill="url(#skinG)"/>
+            <!-- Fingers hint -->
+            <path d="M68 300 Q65 295 70 292" stroke="#E8955C" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M73 296 Q71 290 76 288" stroke="#E8955C" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+            <!-- ── RIGHT ARM (relaxed down) ── -->
+            <path d="M240 215 Q262 232 268 272 Q270 290 260 300 Q248 308 240 295 Q230 278 228 255 L232 220Z" fill="url(#jacketG)"/>
+            <!-- Right hand -->
+            <ellipse cx="262" cy="300" rx="13" ry="11" fill="url(#skinG)"/>
+
+            <!-- ── TABLET in left hand ── -->
+            <rect x="38" y="268" width="52" height="68" rx="6" fill="#0F172A" stroke="rgba(79,70,229,0.5)" stroke-width="1.5"/>
+            <rect x="41" y="272" width="46" height="58" rx="4" fill="url(#screenG)"/>
+            <!-- Screen content: Figma-like UI -->
+            <rect x="44" y="275" width="40" height="4" rx="2" fill="rgba(79,70,229,0.7)"/>
+            <rect x="44" y="282" width="28" height="3" rx="1.5" fill="rgba(168,85,247,0.5)"/>
+            <rect x="44" y="288" width="34" height="3" rx="1.5" fill="rgba(34,211,238,0.4)"/>
+            <rect x="44" y="295" width="40" height="18" rx="3" fill="rgba(79,70,229,0.15)" stroke="rgba(79,70,229,0.3)" stroke-width="0.5"/>
+            <circle cx="52" cy="304" r="4" fill="rgba(168,85,247,0.6)"/>
+            <rect x="58" y="302" width="20" height="3" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+            <rect x="44" y="316" width="40" height="3" rx="1.5" fill="rgba(34,211,238,0.3)"/>
+            <rect x="44" y="322" width="30" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+            <!-- Screen glow -->
+            <rect x="41" y="272" width="46" height="58" rx="4" fill="rgba(79,70,229,0.05)"/>
+
+            <!-- ── NECK ── -->
+            <rect x="158" y="170" width="24" height="30" rx="10" fill="url(#skinG)"/>
+            <!-- Neck shadow -->
+            <rect x="168" y="170" width="14" height="30" rx="10" fill="rgba(0,0,0,0.12)"/>
+
+            <!-- ── HEAD ── -->
+            <!-- Head base -->
+            <ellipse cx="170" cy="145" rx="52" ry="56" fill="url(#faceLightG)"/>
+            <!-- Face shading right -->
+            <ellipse cx="195" cy="150" rx="28" ry="40" fill="rgba(0,0,0,0.07)"/>
+
+            <!-- ── HAIR ── -->
+            <!-- Back of hair -->
+            <ellipse cx="170" cy="130" rx="55" ry="52" fill="url(#hairG)"/>
+            <!-- Hair top wave -->
+            <path d="M118 128 Q125 88 170 84 Q215 88 222 128" fill="url(#hairG)"/>
+            <!-- Hair detail highlight -->
+            <path d="M135 110 Q148 98 162 102" stroke="rgba(255,255,255,0.12)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M140 105 Q153 95 165 98" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- Side hair left -->
+            <path d="M118 128 Q110 145 115 165 Q120 158 122 148Z" fill="url(#hairG)"/>
+            <!-- Side hair right -->
+            <path d="M222 128 Q230 145 225 165 Q220 158 218 148Z" fill="url(#hairG)"/>
+
+            <!-- ── FACE FEATURES ── -->
+            <!-- Ear left -->
+            <ellipse cx="119" cy="148" rx="9" ry="12" fill="url(#skinG)"/>
+            <ellipse cx="120" cy="148" rx="5" ry="8" fill="#E8955C" opacity="0.5"/>
+            <!-- Ear right -->
+            <ellipse cx="221" cy="148" rx="9" ry="12" fill="url(#skinG)"/>
+            <ellipse cx="220" cy="148" rx="5" ry="8" fill="#E8955C" opacity="0.5"/>
+
+            <!-- Eyebrows -->
+            <path d="M145 128 Q155 123 165 126" stroke="#3D1F00" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M175 126 Q185 123 195 128" stroke="#3D1F00" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+            <!-- Eyes -->
+            <!-- Left eye white -->
+            <ellipse cx="155" cy="142" rx="11" ry="9" fill="white"/>
+            <!-- Right eye white -->
+            <ellipse cx="185" cy="142" rx="11" ry="9" fill="white"/>
+            <!-- Left iris -->
+            <circle cx="157" cy="143" r="6" fill="#1A0A2E"/>
+            <circle cx="157" cy="143" r="4" fill="#4F46E5"/>
+            <circle cx="157" cy="143" r="2.5" fill="#1A0A2E"/>
+            <!-- Left eye shine -->
+            <circle cx="159" cy="141" r="1.5" fill="white"/>
+            <!-- Right iris -->
+            <circle cx="187" cy="143" r="6" fill="#1A0A2E"/>
+            <circle cx="187" cy="143" r="4" fill="#4F46E5"/>
+            <circle cx="187" cy="143" r="2.5" fill="#1A0A2E"/>
+            <!-- Right eye shine -->
+            <circle cx="189" cy="141" r="1.5" fill="white"/>
+
+            <!-- Nose -->
+            <path d="M167 150 Q170 162 173 150" stroke="#C8784A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <ellipse cx="165" cy="159" rx="4" ry="2.5" fill="rgba(0,0,0,0.08)"/>
+            <ellipse cx="175" cy="159" rx="4" ry="2.5" fill="rgba(0,0,0,0.08)"/>
+
+            <!-- Smile -->
+            <path d="M156 168 Q170 178 184 168" stroke="#C8784A" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+            <!-- ── HEADPHONES (designer accessory) ── -->
+            <path d="M118 135 Q118 88 170 85 Q222 88 222 135" stroke="url(#jacketG)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <!-- Left cup -->
+            <rect x="110" y="133" width="18" height="24" rx="9" fill="#1E293B" stroke="rgba(79,70,229,0.6)" stroke-width="1.5"/>
+            <rect x="113" y="136" width="12" height="18" rx="6" fill="url(#jacketG)"/>
+            <!-- Right cup -->
+            <rect x="212" y="133" width="18" height="24" rx="9" fill="#1E293B" stroke="rgba(79,70,229,0.6)" stroke-width="1.5"/>
+            <rect x="215" y="136" width="12" height="18" rx="6" fill="url(#jacketG)"/>
+
+            <!-- ── GLOW AURA ── -->
+            <ellipse cx="170" cy="320" rx="90" ry="20" fill="url(#shadowG)" opacity="0.5"/>
+
+            <!-- ── NAME TAG floating ── -->
+            <rect x="122" y="5" width="96" height="28" rx="14" fill="rgba(13,21,38,0.9)" stroke="rgba(79,70,229,0.5)" stroke-width="1"/>
+            <text x="170" y="23" text-anchor="middle" font-family="'Syne', sans-serif" font-size="11" font-weight="700" fill="#F8FAFC" letter-spacing="1">RAGESH</text>
+            <!-- Tag dot -->
+            <circle cx="132" cy="19" r="3" fill="#22D3EE">
+              <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+
+        <!-- Float Cards Wrap -->
+        <div class="hero-float-cards-wrap">
+          <div class="hero-float-card">
+            <div class="fc-icon">🎨</div>
+            <div class="fc-title">Design System</div>
+            <div class="fc-sub">Figma · 2024</div>
+          </div>
+          <div class="hero-float-card">
+            <div class="fc-icon">📈</div>
+            <div class="fc-title">+30% Conversion</div>
+            <div class="fc-sub">E-Commerce Redesign</div>
+          </div>
+          <div class="hero-float-card">
+            <div class="fc-icon">🏆</div>
+            <div class="fc-title">Awards SOTD</div>
+            <div class="fc-sub">Featured Project</div>
+          </div>
+        </div>
+
+      </div>
+        <!-- <div class="hero-3d-object">
+          -- The 3D-looking character image 
           <img src="assets/img/Ragesh Profile.png" alt="Ragesh P Character" class="hero-character" style="border-radius: 50%;">
           <div class="object-glow"></div>
-        </div>
+        </div> -->
+
       </div>
+      
     </div>
     
     <div class="hero-scroll-hint">
@@ -324,38 +551,165 @@
       </div>
       <div class="portfolio-filters reveal-up">
         <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio Websites</button>
         <button class="filter-btn" data-filter="ai">AI / Automation</button>
         <button class="filter-btn" data-filter="web">Web Dev</button>
         <button class="filter-btn" data-filter="marketing">Marketing</button>
       </div>
       <div class="portfolio-grid" id="portfolioGrid">
-        <div class="portfolio-item reveal-up" data-category="ai">
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder ai-theme">
-                <img src="./assets/img/AI Customer Support Bot.jpg" alt="AI Customer Support Bot">
+                <img src="./assets/img/Business Consultant Portfolio.jpg" target="_blank" alt="Business Consultant Portfolio">
                 <!-- <i class="fas fa-robot"></i>
                 <span>AI Chatbot Platform</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
-                <a href="#" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+                <a href="https://github.com/MrRagesh/Business-Consultant-Portfolio" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>Business Consultant Portfolio</h3>
+              <p>High-impact consultant portfolio driving 3× client inquiries with AI-enhanced lead capture.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/Freelance Photographer Portfolio.jpg" alt="Freelance Photographer Portfolio">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/Freelance-Photographer-Portfolio" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>Freelance Photographer Portfolio</h3>
+              <p>Professional portfolio showcasing work and skills for a freelance photographer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/Premium Digital Agency Portfolio.jpg" alt="Premium Digital Agency Portfolio">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/Premium-Digital-Agency-Portfolio-4" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>Premium Digital Agency Portfolio</h3>
+              <p>Professional portfolio showcasing work and skills for a premium digital agency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/UI:UX Designer Portfolio.jpg" alt="UI:UX Designer Portfolio">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/Portfolio-3-UI-UX-Designer" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>UI/UX Designer Portfolio</h3>
+              <p>Professional portfolio showcasing work and skills for a UI/UX designer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/Full Stack Developer Portfoli.jpg" alt="Full Stack Developer Portfoli">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/Portfolio-2" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>Full Stack Developer Portfolio</h3>
+              <p>Professional portfolio showcasing work and skills for a full stack developer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="portfolio">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/Basic Portfolio.jpg" alt="Basic Portfolio">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/Portfolio-1" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">Portfolio Websites</span>
+              <h3>Basic Portfolio</h3>
+              <p>A modern, responsive personal portfolio for a Full Stack Developer, Designer, and Video Editor. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-up" data-category="ai">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/RescueLens-AI.png" alt="RescueLens-AI">
+                <!-- <i class="fas fa-robot"></i>
+                <span>AI Chatbot Platform</span> -->
+              </div>
+              <div class="portfolio-overlay">
+                <a href="https://rescuelensai.vercel.app/" target="_blank" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/RescueLens-AI" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
               </div>
             </div>
             <div class="portfolio-info">
               <span class="port-tag">AI / Automation</span>
-              <h3>AI Customer Support Bot</h3>
-              <p>GPT-powered chatbot reducing support tickets by 60% for an e-commerce brand.</p>
+              <h3>RescueLens-AI Multimodal Assistant</h3>
+              <p>Built for Google AI Hackathon · Powered by Gemini 1.5 Pro · Deployed on Google Cloud Platform.</p>
             </div>
           </div>
         </div>
+
         <div class="portfolio-item reveal-up" data-category="web">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder web-theme">
                 <img src="./assets/img/Premium E-Commerce Store.jpg" alt="Premium E-Commerce Store">
-                <!-- <i class="fas fa-store"></i>
-                <span>E-Commerce Platform</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
@@ -369,13 +723,31 @@
             </div>
           </div>
         </div>
+
+        <div class="portfolio-item reveal-up" data-category="ai">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder ai-theme">
+                <img src="./assets/img/SimplifyED.png" alt="SimplifyED">
+              </div>
+              <div class="portfolio-overlay">
+                <a href="https://github.com/MrRagesh/SimplifyED" target="_blank" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MrRagesh/SimplifyED" target="_blank" class="port-btn outline">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="port-tag">AI / Automation</span>
+              <h3>AI-powered educational platform</h3>
+              <p>SimplifyED is a full-stack, AI-powered educational platform designed to simplify learning for students.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="portfolio-item reveal-up" data-category="marketing">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder mkt-theme">
                 <img src="./assets/img/Meta Ads Growth Campaign.jpg" alt="Meta Ads Growth Campaign">
-                <!-- <i class="fas fa-bullhorn"></i>
-                <span>Growth Campaign</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
@@ -389,13 +761,12 @@
             </div>
           </div>
         </div>
+
         <div class="portfolio-item reveal-up" data-category="ai">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder ai-theme">
                 <img src="./assets/img/Business Workflow Automation.jpg" alt="Business Workflow Automation">
-                <!-- <i class="fas fa-cogs"></i>
-                <span>Automation System</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
@@ -409,13 +780,12 @@
             </div>
           </div>
         </div>
+
         <div class="portfolio-item reveal-up" data-category="web">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder web-theme">
                 <img src="./assets/img/Healthcare Booking System.jpg" alt="Healthcare Booking System">
-                <!-- <i class="fas fa-hospital"></i>
-                <span>Healthcare Portal</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
@@ -429,13 +799,12 @@
             </div>
           </div>
         </div>
+
         <div class="portfolio-item reveal-up" data-category="marketing">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <div class="portfolio-placeholder mkt-theme">
                 <img src="./assets/img/GMB & Local SEO Domination.jpg" alt="GMB & Local SEO Domination">
-                <!-- <i class="fas fa-map-marker-alt"></i>
-                <span>Local SEO</span> -->
               </div>
               <div class="portfolio-overlay">
                 <a href="#" class="port-btn">View Live <i class="fas fa-external-link-alt"></i></a>
@@ -449,6 +818,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -575,7 +945,7 @@
             <i class="fab fa-whatsapp"></i>
             <div>
               <strong>WhatsApp</strong>
-              <a href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
+              <a href="https://wa.me/919042542645" target="_blank">Chat on WhatsApp</a>
             </div>
           </div>
           <div class="contact-card">
@@ -701,16 +1071,16 @@
   <!-- ========== FLOATING SOCIAL FAB ========== -->
   <div class="fab-container" id="fabContainer">
     <div class="fab-menu" id="fabMenu">
-      <a href="https://wa.me/919999999999" target="_blank" class="fab-item whatsapp" title="WhatsApp">
+      <a href="https://wa.me/919042542645" target="_blank" class="fab-item whatsapp" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a href="https://linkedin.com/in/rageshp" target="_blank" class="fab-item linkedin" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/ragesh1208/" target="_blank" class="fab-item linkedin" title="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://instagram.com/rageshp" target="_blank" class="fab-item instagram" title="Instagram">
+      <a href="https://www.instagram.com/mr.ragesh._.7/" target="_blank" class="fab-item instagram" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://github.com/rageshp" target="_blank" class="fab-item github" title="GitHub">
+      <a href="https://github.com/MrRagesh" target="_blank" class="fab-item github" title="GitHub">
         <i class="fab fa-github"></i>
       </a>
       <a href="https://youtube.com/@rageshp" target="_blank" class="fab-item youtube" title="YouTube">
