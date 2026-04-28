@@ -8,9 +8,9 @@
   /* ─── CONFIG ─────────────────────────────────── */
   const CONFIG = {
     emailJS: {
-      serviceId: "YOUR_SERVICE_ID",       // Replace with EmailJS service ID
-      templateId: "YOUR_TEMPLATE_ID",     // Replace with EmailJS template ID
-      publicKey: "YOUR_PUBLIC_KEY",        // Replace with EmailJS public key
+      serviceId: "service_mj1pq8n",       // Replace with EmailJS service ID
+      templateId: "template_jwofgn7",     // Replace with EmailJS template ID
+      publicKey: "mMgC5odTkVAEuu3dA",        // Replace with EmailJS public key
     },
     ownerEmail: "rageshp.work@gmail.com",
   };
@@ -323,7 +323,7 @@
         if (navigator.clipboard) {
           navigator.clipboard.writeText(email).then(() => {
             showToast("Email copied to clipboard!", "success");
-          }).catch(() => {});
+          }).catch(() => { });
         }
       });
     });
@@ -350,7 +350,7 @@
     hero.addEventListener("mousemove", (e) => {
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
-      
+
       const x = (clientX - innerWidth / 2) / 25;
       const y = (clientY - innerHeight / 2) / 25;
 
