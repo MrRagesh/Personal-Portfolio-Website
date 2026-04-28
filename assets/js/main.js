@@ -130,8 +130,24 @@
     return valid;
   }
 
-  /* ─── CONTACT FORM ──────────────────────────── */
-  function initContactForm() {
+  /* ─── WHATSAPP DIRECT MESSAGE ────────────────── */
+function openWhatsAppDirect(formData) {
+  const phone = "919042542645";
+  const text = `*New Inquiry from Portfolio*\n\n` +
+    `*Name:* ${formData.name}\n` +
+    `*Email:* ${formData.email}\n` +
+    `*Phone:* ${formData.phone || "Not provided"}\n` +
+    `*Service:* ${formData.service}\n` +
+    `*Message:* ${formData.message}`;
+
+  const encodedText = encodeURIComponent(text);
+  const whatsappURL = `https://wa.me/${phone}?text=${encodedText}`;
+
+  window.open(whatsappURL, "_blank");
+}
+
+/* ─── CONTACT FORM ──────────────────────────── */
+function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
 
@@ -190,6 +206,9 @@
           // Demo mode: simulate network delay
           await new Promise((r) => setTimeout(r, 1800));
         }
+
+        // Open WhatsApp with pre-filled message
+        openWhatsAppDirect(formData);
 
         // Store in localStorage as backup (demo)
         storeSubmission(formData);
