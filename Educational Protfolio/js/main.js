@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       },
       color: {
-        value: '#00A3FF'
+        value: '#0ea5e9'
       },
       shape: {
         type: 'circle',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
       line_linked: {
         enable: true,
         distance: 150,
-        color: '#00A3FF',
+        color: '#0ea5e9',
         opacity: 0.4,
         width: 1
       },
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Typed.js Initialization
   const options = {
     strings: [
-      'Full Stack Developer',
-      'Graphic Designer',
-      'UI/UX Designer',
-      'Video Editor',
-      'Freelancer'
+      'Technology Student',
+      'Continuous Learner',
+      'AI Enthusiast',
+      'Web Development Learner',
+      'Self-Taught Designer'
     ],
     typeSpeed: 80,
     backSpeed: 50,
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Detect when cursor hovers over links or buttons
-  const hoverElements = document.querySelectorAll('a, button, .btn, .project-item, .skill-item, .social-icon');
+  const hoverElements = document.querySelectorAll('a, button, .btn, .certificate-item, .skill-item, .social-icon');
   
   hoverElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
@@ -267,38 +267,6 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScroll();
   });
   
-  // Project filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectItems = document.querySelectorAll('.project-item');
-  
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
-      this.classList.add('active');
-      
-      const filterValue = this.getAttribute('data-filter');
-      
-      projectItems.forEach(item => {
-        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-          item.style.display = 'block';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, 100);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(20px)';
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 500);
-        }
-      });
-    });
-  });
-  
   // Tab switching for timeline
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
@@ -350,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Animation on scroll
   function animateOnScroll() {
-    const animElements = document.querySelectorAll('.section-header, .skill-item, .project-item, .timeline-item, .tool-item, .about-content');
+    const animElements = document.querySelectorAll('.section-header, .skill-item, .certificate-item, .timeline-item, .tool-item, .about-content');
     const windowHeight = window.innerHeight;
     
     animElements.forEach(element => {

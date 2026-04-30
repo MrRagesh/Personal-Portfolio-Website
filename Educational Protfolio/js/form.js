@@ -36,18 +36,32 @@ document.addEventListener('DOMContentLoaded', function() {
     return emailRegex.test(email);
   }
   
-  // Simulate form submission (replace with actual form submission code)
+  // Redirect to WhatsApp
   function simulateFormSubmission(name, email, subject, message) {
     // Show loading state
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecting...';
     submitBtn.disabled = true;
     
-    // Simulate network request
+    // Construct WhatsApp message
+    const phoneNumber = "919042542645"; // Your WhatsApp number
+    const encodedMessage = encodeURIComponent(
+      `*New Message from Portfolio*\n\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Subject:* ${subject}\n\n` +
+      `*Message:* ${message}`
+    );
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab
     setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+      
       // Show success message
-      showFormNotification('Your message has been sent successfully!', 'success');
+      showFormNotification('Redirecting to WhatsApp...', 'success');
       
       // Reset form
       contactForm.reset();
@@ -55,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Reset button
       submitBtn.innerHTML = originalBtnText;
       submitBtn.disabled = false;
-    }, 2000);
+    }, 1000);
   }
   
   // Show notification message

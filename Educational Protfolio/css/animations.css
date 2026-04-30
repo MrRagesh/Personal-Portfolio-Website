@@ -187,9 +187,45 @@
   animation: fadeInDown 0.5s ease forwards 1s;
 }
 
+/* Neon Glow Animation
+@keyframes neon-pulse {
+  from {
+    filter: drop-shadow(0 0 2px #ffa500) drop-shadow(0 0 5px #ff8c00);
+  }
+  to {
+    filter: drop-shadow(0 0 5px #ffa500) drop-shadow(0 0 15px #ff4500);
+  }
+} */
+
 .profile-img-wrapper {
   opacity: 0;
   animation: fadeInRight 0.5s ease forwards 0.5s, morphBlob 8s ease-in-out infinite;
+}
+
+.welcome-badge {
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards 0.1s;
+}
+
+.hero-description {
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards 0.7s;
+}
+
+.floating-badge {
+  opacity: 0;
+  animation: scaleIn 0.5s ease forwards 1.2s;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .section-header {
