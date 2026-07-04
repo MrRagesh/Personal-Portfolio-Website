@@ -174,46 +174,6 @@ body.cursor-hover .cursor-dot { width: 14px; height: 14px; background: var(--ora
 body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--orange); }
 @media (hover: none) { .cursor-dot, .cursor-ring { display: none; } body { cursor: auto; } }
 
-/* ─── LOADER ─────────────────────────────────────── */
-.loader {
-  position: fixed; inset: 0;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 10000;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-.loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-.loader-inner { text-align: center; }
-.loader-logo {
-  font-family: var(--font-head);
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--blue);
-  text-shadow: 0 0 40px var(--blue-glow);
-  animation: pulse 1s infinite;
-  margin-bottom: 24px;
-}
-.loader-bar {
-  width: 200px; height: 3px;
-  background: var(--border);
-  border-radius: 10px;
-  margin: 0 auto 16px;
-  overflow: hidden;
-}
-.loader-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--blue), var(--purple), var(--orange));
-  border-radius: 10px;
-  animation: loadProgress 2s ease forwards;
-}
-.loader-text {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-}
-@keyframes loadProgress { from { width: 0; } to { width: 100%; } }
-@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
-
 /* ─── NAVBAR ─────────────────────────────────────── */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0;

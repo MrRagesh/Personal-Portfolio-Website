@@ -15,33 +15,6 @@
     ownerEmail: "rageshp.work@gmail.com",
   };
 
-  /* ─── LOADER ─────────────────────────────────── */
-  function initLoader() {
-    const loader = document.getElementById("loader");
-    if (!loader) return;
-
-    // Minimum 2.2s loading for brand impression
-    const minTime = 2200;
-    const startTime = Date.now();
-
-    window.addEventListener("load", () => {
-      const elapsed = Date.now() - startTime;
-      const delay = Math.max(0, minTime - elapsed);
-
-      setTimeout(() => {
-        loader.classList.add("hidden");
-        document.body.style.overflow = "";
-        // Trigger hero animations
-        document.querySelectorAll(".hero-content > *").forEach((el, i) => {
-          el.style.animationPlayState = "running";
-        });
-      }, delay);
-    });
-
-    // Fallback in case window.load doesn't fire
-    setTimeout(() => loader.classList.add("hidden"), 5000);
-  }
-
   /* ─── HAMBURGER / MOBILE MENU ──────────────── */
   function initMobileMenu() {
     const hamburger = document.getElementById("hamburger");
@@ -386,7 +359,6 @@ function initContactForm() {
 
   /* ─── MAIN INIT ─────────────────────────────── */
   function init() {
-    initLoader();
     initMobileMenu();
     initSmoothScroll();
     initHeroParallax();
