@@ -23,7 +23,7 @@
   --radius:      14px;
   --radius-sm:   8px;
   --shadow:      0 24px 60px rgba(0,0,0,0.5);
-  --transition:  all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --transition:  all 0.15s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* ─── RESET & BASE ──────────────────────────────── */
@@ -318,7 +318,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   position: relative;
   z-index: 5;
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
-  animation: floatBody 6s ease-in-out infinite;
+  animation: floatBody 2.5s ease-in-out infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,13 +357,13 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 .char-orbit-1 {
   width: 450px;
   height: 450px;
-  animation: orbitSpin 15s linear infinite;
+  animation: orbitSpin 6s linear infinite;
 }
 
 .char-orbit-2 {
   width: 350px;
   height: 350px;
-  animation: orbitSpin 10s linear reverse infinite;
+  animation: orbitSpin 4s linear reverse infinite;
 }
 
 @media (max-width: 768px) {
@@ -399,10 +399,10 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   z-index: 6;
 }
 
-.cp-1 { top: 20%; left: 10%; animation: floatParticle 4s infinite 0s; }
-.cp-2 { top: 60%; right: 10%; animation: floatParticle 5s infinite 1s; }
-.cp-3 { bottom: 20%; left: 20%; animation: floatParticle 6s infinite 2s; }
-.cp-4 { top: 10%; right: 20%; animation: floatParticle 4s infinite 3s; }
+.cp-1 { top: 20%; left: 10%; animation: floatParticle 1.5s infinite 0s; }
+.cp-2 { top: 60%; right: 10%; animation: floatParticle 2s infinite 1s; }
+.cp-3 { bottom: 20%; left: 20%; animation: floatParticle 2.5s infinite 2s; }
+.cp-4 { top: 10%; right: 20%; animation: floatParticle 1.5s infinite 3s; }
 
 @keyframes floatBody {
   0%, 100% { transform: translateY(0); }
@@ -436,7 +436,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   gap: 6px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
-  animation: floatCard 5s ease-in-out infinite;
+  animation: floatCard 2s ease-in-out infinite;
   min-width: 180px;
 }
 
@@ -490,7 +490,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   position: relative;
   width: 100%;
   max-width: 450px;
-  animation: floatCharacter 6s ease-in-out infinite;
+  animation: floatCharacter 2.5s ease-in-out infinite;
   transform-style: preserve-3d;
 }
 .hero-character {
@@ -581,14 +581,14 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   font-weight: 500;
   color: var(--blue);
   margin-bottom: 28px;
-  animation: fadeSlideDown 0.8s ease 0.3s both;
+  animation: fadeSlideDown 0.3s ease 0.1s both;
 }
 .badge-dot {
   width: 8px; height: 8px;
   background: #22c55e;
   border-radius: 50%;
   box-shadow: 0 0 8px #22c55e;
-  animation: blinkDot 2s infinite;
+  animation: blinkDot 0.8s infinite;
 }
 @keyframes blinkDot { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
 
@@ -598,7 +598,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   flex-direction: column;
   gap: 6px;
   margin-bottom: 24px;
-  animation: fadeSlideDown 0.8s ease 0.5s both;
+  animation: fadeSlideDown 0.3s ease 0.2s both;
 }
 .hero-greeting {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -632,20 +632,20 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   line-height: 1.8;
   max-width: 600px;
   margin-bottom: 40px;
-  animation: fadeSlideDown 0.8s ease 0.7s both;
+  animation: fadeSlideDown 0.3s ease 0.3s both;
 }
 .hero-btns {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  animation: fadeSlideDown 0.8s ease 0.9s both;
+  animation: fadeSlideDown 0.3s ease 0.4s both;
 }
 .hero-stats {
   display: flex;
   align-items: center;
   gap: clamp(20px, 4vw, 40px);
-  animation: fadeSlideDown 0.8s ease 1.1s both;
+  animation: fadeSlideDown 0.3s ease 0.5s both;
   margin-top: 10px;
 }
 .stat-item { 
@@ -671,15 +671,15 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   display: flex; align-items: center; gap: 12px;
   font-size: 0.8rem; color: var(--text-muted);
   writing-mode: vertical-rl;
-  animation: fadeSlideDown 0.8s ease 1.3s both;
+  animation: fadeSlideDown 0.3s ease 0.6s both;
 }
 .scroll-line {
   width: 2px; height: 50px;
   background: linear-gradient(to bottom, var(--blue), transparent);
-  animation: scrollPulse 2s infinite;
+  animation: scrollPulse 0.8s infinite;
 }
 @keyframes scrollPulse { 0%,100% { transform:scaleY(1); opacity:1; } 50% { transform:scaleY(0.5); opacity:0.5; } }
-@keyframes fadeSlideDown { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeSlideDown { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
 
 /* ─── ABOUT SECTION ─────────────────────────────── */
 .about { background: var(--bg-2); }
@@ -726,9 +726,9 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   border: 1px solid rgba(14,165,233,0.2);
   animation: orbitSpin 8s linear infinite;
 }
-.ring-1 { width: 220px; height: 220px; animation-duration: 8s; }
-.ring-2 { width: 190px; height: 190px; animation-duration: 12s; animation-direction: reverse; border-color: rgba(139,92,246,0.2); }
-.ring-3 { width: 160px; height: 160px; animation-duration: 16s; border-color: rgba(249,115,22,0.2); }
+.ring-1 { width: 220px; height: 220px; animation-duration: 3s; }
+.ring-2 { width: 190px; height: 190px; animation-duration: 4.5s; animation-direction: reverse; border-color: rgba(139,92,246,0.2); }
+.ring-3 { width: 160px; height: 160px; animation-duration: 6s; border-color: rgba(249,115,22,0.2); }
 @keyframes orbitSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 .about-badge-float {
@@ -743,7 +743,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   color: var(--text-bright);
   display: flex; align-items: center; gap: 8px;
   white-space: nowrap;
-  animation: floatBadge 3s ease-in-out infinite;
+  animation: floatBadge 1.2s ease-in-out infinite;
 }
 .about-badge-float i { color: var(--blue); }
 .badge-1 { top: 10%; right: -10%; animation-delay: 0s; }
@@ -780,7 +780,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   width: 0;
   background: linear-gradient(90deg, var(--blue), var(--purple));
   border-radius: 10px;
-  transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
   box-shadow: 0 0 8px var(--blue-glow);
 }
 
@@ -788,7 +788,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   margin-top: 45px;
   display: flex;
   justify-content: center;
-  animation: fadeUp 1s ease 0.5s both;
+  animation: fadeUp 0.3s ease 0.2s both;
 }
 
 /* Neon Button for Education Portfolio */
@@ -1081,7 +1081,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   padding: 32px 28px;
   display: none;
   transition: var(--transition);
-  animation: fadeSlideDown 0.5s ease;
+  animation: fadeSlideDown 0.2s ease;
 }
 .testimonial-card.active { display: block; }
 .testi-quote { color: var(--blue); font-size: 1.5rem; margin-bottom: 16px; opacity: 0.6; }
@@ -1200,7 +1200,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 0 8px #22c55e;
-  animation: blinkDot 2s infinite;
+  animation: blinkDot 0.8s infinite;
 }
 
 /* ─── CONTACT FORM ──────────────────────────────── */
@@ -1252,7 +1252,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
   border: 1px solid rgba(34,197,94,0.3);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
-  animation: fadeSlideDown 0.5s ease;
+  animation: fadeSlideDown 0.2s ease;
 }
 .form-success i { font-size: 1.5rem; color: #22c55e; }
 .form-success strong { display: block; color: #4ade80; font-size: 0.95rem; }
@@ -1433,11 +1433,11 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 /* ─── SCROLL REVEAL ANIMATIONS ──────────────────── */
 .reveal-up, .reveal-left, .reveal-right {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
+.reveal-left { transform: translateX(-20px); }
+.reveal-right { transform: translateX(20px); }
 .reveal-up.visible, .reveal-left.visible, .reveal-right.visible {
   opacity: 1; transform: none;
 }

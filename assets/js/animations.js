@@ -19,8 +19,8 @@
       const color = colors[Math.floor(Math.random() * colors.length)];
       const left = Math.random() * 100;
       const top = Math.random() * 100;
-      const duration = Math.random() * 20 + 10;
-      const delay = Math.random() * 10;
+      const duration = Math.random() * 8 + 4;
+    const delay = Math.random() * 3;
 
       dot.style.cssText = `
         position: absolute;
@@ -70,7 +70,7 @@
         { textContent: 0 },
         {
           textContent: target,
-          duration: 2.5,
+          duration: 3,
           ease: "power2.out",
           snap: { textContent: 1 },
           scrollTrigger: { trigger: el, start: "top 90%", once: true },
@@ -83,7 +83,7 @@
       const w = bar.dataset.width;
       gsap.to(bar, {
         width: w + "%",
-        duration: 1.5,
+        duration: 0.6,
         ease: "power3.out",
         scrollTrigger: { trigger: bar, start: "top 85%", once: true },
       });
@@ -97,8 +97,8 @@
         {
           y: 0,
           opacity: 1,
-          duration: 0.7,
-          delay: i * 0.12,
+          duration: 0.35,
+          delay: i * 0.06,
           ease: "power3.out",
           scrollTrigger: { trigger: card, start: "top 88%", once: true },
         }
@@ -114,8 +114,8 @@
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.65,
-          delay: i * 0.1,
+          duration: 0.3,
+          delay: i * 0.05,
           ease: "power3.out",
           scrollTrigger: { trigger: item, start: "top 90%", once: true },
         }
@@ -128,7 +128,7 @@
         el,
         { y: 40, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+          y: 0, opacity: 1, duration: 0.4, ease: "power3.out",
           scrollTrigger: { trigger: el, start: "top 85%", once: true },
         }
       );
@@ -139,7 +139,7 @@
       ".about-img-wrapper",
       { x: -60, opacity: 0 },
       {
-        x: 0, opacity: 1, duration: 1, ease: "power3.out",
+        x: 0, opacity: 1, duration: 0.5, ease: "power3.out",
         scrollTrigger: { trigger: ".about", start: "top 75%", once: true },
       }
     );
@@ -148,7 +148,7 @@
       ".about-content",
       { x: 60, opacity: 0 },
       {
-        x: 0, opacity: 1, duration: 1, ease: "power3.out",
+        x: 0, opacity: 1, duration: 0.5, ease: "power3.out",
         scrollTrigger: { trigger: ".about", start: "top 75%", once: true },
       }
     );
@@ -158,7 +158,7 @@
       ".cta-content",
       { y: 60, opacity: 0, scale: 0.97 },
       {
-        y: 0, opacity: 1, scale: 1, duration: 0.9, ease: "power3.out",
+        y: 0, opacity: 1, scale: 1, duration: 0.45, ease: "power3.out",
         scrollTrigger: { trigger: ".cta-section", start: "top 80%", once: true },
       }
     );
@@ -168,7 +168,7 @@
       ".contact-info",
       { x: -40, opacity: 0 },
       {
-        x: 0, opacity: 1, duration: 0.85, ease: "power3.out",
+        x: 0, opacity: 1, duration: 0.4, ease: "power3.out",
         scrollTrigger: { trigger: ".contact", start: "top 80%", once: true },
       }
     );
@@ -177,7 +177,7 @@
       ".contact-form-wrap",
       { x: 40, opacity: 0 },
       {
-        x: 0, opacity: 1, duration: 0.85, ease: "power3.out",
+        x: 0, opacity: 1, duration: 0.4, ease: "power3.out",
         scrollTrigger: { trigger: ".contact", start: "top 80%", once: true },
       }
     );
@@ -187,7 +187,7 @@
       ".testimonials-wrapper",
       { y: 50, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+        y: 0, opacity: 1, duration: 0.4, ease: "power3.out",
         scrollTrigger: { trigger: ".testimonials-wrapper", start: "top 85%", once: true },
       }
     );
@@ -228,7 +228,7 @@
       roles[current].classList.remove("active");
       current = (current + 1) % roles.length;
       roles[current].classList.add("active");
-    }, 2800);
+    }, 1200);
   }
 
   /* ─── PORTFOLIO FILTER ───────────────────────── */
@@ -310,7 +310,7 @@
 
     function resetAuto() {
       clearInterval(autoTimer);
-      autoTimer = setInterval(next, 4500);
+      autoTimer = setInterval(next, 2000);
     }
 
     goTo(0);
