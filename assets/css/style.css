@@ -787,6 +787,8 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 .about-action {
   margin-top: 45px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   animation: fadeUp 0.3s ease 0.2s both;
 }
@@ -794,6 +796,8 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 /* Neon Button for Education Portfolio */
 .btn-neon {
   display: inline-flex;
+  width: 300px;
+  /* justify-content: center; */
   align-items: center;
   gap: 10px;
   padding: 10px 24px;
@@ -1481,7 +1485,7 @@ body.cursor-hover .cursor-ring { width: 54px; height: 54px; border-color: var(--
 @media (max-width: 480px) {
   .hero-name { font-size: clamp(2.2rem, 10vw, 3rem); }
   .hero-btns { flex-direction: column; align-items: center; width: 100%; }
-  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .btn-primary { width: 100%; justify-content: center; }
   .hero-stats { flex-direction: row; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
   .stat-item { flex: 1 1 40%; }
   .stat-divider { display: none; }
