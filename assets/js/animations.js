@@ -78,17 +78,6 @@
       );
     });
 
-    // Skill bars
-    gsap.utils.toArray(".skill-fill").forEach((bar) => {
-      const w = bar.dataset.width;
-      gsap.to(bar, {
-        width: w + "%",
-        duration: 0.6,
-        ease: "power3.out",
-        scrollTrigger: { trigger: bar, start: "top 85%", once: true },
-      });
-    });
-
     // Services cards stagger
     gsap.utils.toArray(".service-card").forEach((card, i) => {
       gsap.fromTo(
